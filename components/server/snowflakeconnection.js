@@ -15,3 +15,21 @@ sfConnection.connect((err) => {
   if (err) console.error("❌ Snowflake connection error:", err);
   else console.log("✅ Connected to Snowflake");
 });
+
+// ADD THIS FUNCTION - it's what stats.js is looking for
+export function query(sql, params = []) {
+  return new Promise((resolve, reject) => {
+    sfConnection.execute({
+      sqlText: sql,
+      binds: params,
+      complete: (err, stmt, rows) => {
+        if (err) {
+          console.error("❌ Snowflake query error:", err);
+          reject(err);
+        } else {
+          resolve(rows);
+        }
+      }
+    });
+  });
+}
