@@ -24,6 +24,18 @@ app.use(express.json());
 // 3b) Health check (Render pings this, and you can test quickly)
 app.get("/health", (_req, res) => res.json({ ok: true }));
 
+// 3c) Root route
+app.get("/", (_req, res) => {
+  res.json({ 
+    message: "Mindful Bloom API is running!",
+    endpoints: {
+      health: "/health",
+      stats: "/api/stats", 
+      events: "/api/"
+    }
+  });
+});
+
 // 4) Routes
 app.use("/api/stats", statsRoutes);
 app.use("/api", eventsRouter);

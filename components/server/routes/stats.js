@@ -49,4 +49,15 @@ router.get('/points', async (_req, res) => {
   res.json({ points });
 });
 
+// Add a GET route for /api/stats
+router.get("/", (req, res) => {
+  res.json({ 
+    message: "Stats API is working!",
+    endpoints: {
+      moods: "GET /api/stats/moods?days=7",
+      points: "GET /api/stats/points"
+    }
+  });
+});
+
 export default router;
