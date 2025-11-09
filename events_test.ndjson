@@ -1,0 +1,2 @@
+{"ts":"2025-11-09T13:00:00Z","type":"checkin","userId":"u_123","app":"mindful-bloom","version":"1.0.0","mood":"calm","taskId":null,"completed":null,"entryId":null,"length":null}
+{"ts":"2025-11-09T13:05:00Z","type":"task_completed","anonId":"a_456","app":"mindful-bloom","version":"1.0.0","mood":"happy","taskId":"t_001","completed":true,"entryId":null,"length":null}

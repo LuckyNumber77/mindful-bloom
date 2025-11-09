@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mindful Bloom</title>
+
+    <!-- Tailwind via CDN is fine for now -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- IMPORTANT: Removed the import map that forced React 19 from a CDN.
+         Vite should resolve React/ReactDOM from node_modules (React 18). -->
+
+    <!-- If you don't actually have /index.css, delete the line below. -->
+    <link rel="stylesheet" href="/index.css" />
+  </head>
+  <body class="bg-slate-50">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
